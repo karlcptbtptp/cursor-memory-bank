@@ -1,0 +1,27 @@
+---
+description: Cross-conversation memory with SQLite memory bank search
+globs:
+alwaysApply: true
+---
+
+# Cross-conversation Memory
+
+## Use SQLite Memory Bank for Context
+
+When the user's question might have been discussed in previous conversations, proactively search:
+
+```shell
+npx tsx src/search.ts "keyword"
+npx tsx src/search.ts --knowledge "keyword"
+npx tsx src/search.ts "keyword" --since 7d
+```
+
+**When to search**: user says "discussed before", question might have been analyzed before, need to find historical decision rationale, might have encountered this issue before.
+**Don't search**: brand new questions, casual chat, simple operations.
+
+Full search usage: see `.cursor/skills/memory-bank/SKILL.md` Part 1.
+
+## Memory Maintenance
+
+- Run `npm run memory:ingest:incremental` periodically to sync new conversations
+- When user explicitly corrects understanding, update corresponding memory files

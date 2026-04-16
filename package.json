@@ -1,0 +1,29 @@
+{
+  "name": "cursor-memory-bank",
+  "version": "1.0.0",
+  "description": "SQLite + FTS5 cross-conversation knowledge management for Cursor IDE. Ingest agent transcripts, full-text search (with Chinese trigram support), and distill reusable knowledge.",
+  "type": "module",
+  "scripts": {
+    "memory:setup": "tsx src/setup.ts",
+    "memory:ingest": "tsx src/ingest.ts",
+    "memory:ingest:incremental": "tsx src/ingest.ts --incremental",
+    "memory:search": "tsx src/search.ts",
+    "memory:harvest": "tsx src/harvest.ts",
+    "memory:stats": "tsx src/search.ts --stats",
+    "memory:health": "tsx src/search.ts --health"
+  },
+  "keywords": [
+    "cursor",
+    "memory",
+    "sqlite",
+    "fts5",
+    "knowledge-management",
+    "agent-transcripts",
+    "chinese-search"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "better-sqlite3": "^11.9.1",
+    "tsx": "^4.19.4"
+  }
+}

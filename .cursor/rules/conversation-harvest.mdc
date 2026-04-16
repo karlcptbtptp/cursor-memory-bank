@@ -1,0 +1,23 @@
+---
+description: Conversation distillation trigger — detect distillation timing, detailed flow in Skill
+globs:
+alwaysApply: true
+---
+
+# Conversation Distillation Trigger
+
+When the following signals appear, read `.cursor/skills/memory-bank/SKILL.md` **Part 2** and execute distillation:
+
+- User says "done", "that's it", "wrapping up", "end of day"
+- A complete analysis task finished (report published)
+- Solved a specific technical/business problem
+- Hit a gotcha and found the solution
+- Made a decision with trade-offs
+
+Don't distill: Q&A, casual chat, trivial one-liner operations.
+
+Quick harvest command (see Skill for details):
+
+```shell
+npx tsx src/harvest.ts add --category "finding" --title "Title" --content "Content" --tags "tags"
+```
