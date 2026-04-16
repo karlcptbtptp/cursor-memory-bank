@@ -22,7 +22,7 @@ Copy the files into your existing project:
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/cursor-memory-bank.git
+git clone https://github.com/karlcptbtptp/cursor-memory-bank.git
 
 # Copy src/ into your project as 90_tools/memory-db/ (or any path you prefer)
 # Copy .cursor/ rules and skills into your project's .cursor/
@@ -35,7 +35,7 @@ npm install better-sqlite3 tsx
 Or use it standalone:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/cursor-memory-bank.git
+git clone https://github.com/karlcptbtptp/cursor-memory-bank.git
 cd cursor-memory-bank
 npm install
 npm run memory:setup
